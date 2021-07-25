@@ -1,2 +1,2 @@
 # Leetcodes
-some problems in leetcode
+力扣刷题暂记录
