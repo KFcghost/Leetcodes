@@ -9,6 +9,7 @@
 #include <stack>
 #include <algorithm>
 #include <unordered_set>
+#include <vector>
 
 using namespace std;
 
