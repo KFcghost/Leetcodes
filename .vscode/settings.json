@@ -104,5 +104,6 @@
         "functionTypeSymbol": "*",
         "typeParamOrder": "type param",
         "customHasHeadEnd": {}
-    }
+    },
+    "cmake.configureOnOpen": false
 }
