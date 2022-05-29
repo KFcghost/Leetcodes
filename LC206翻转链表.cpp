@@ -2,7 +2,7 @@
  * @Description: LEETCODE
  * @Author: Aspirin
  * @Date: 2021-08-18 23:34:55
- * @LastEditTime: 2021-08-18 23:46:31
+ * @LastEditTime: 2022-02-22 09:37:40
  * @LastEditors: Aspirin
  */
 #include <vector>
@@ -21,6 +21,7 @@ struct ListNode {
       ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
  
+ //迭代
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
@@ -35,6 +36,20 @@ public:
             newhead = head;
             head = temp;
         }
+        return newhead;
+    }
+};
+
+//递归
+class solution1{
+    ListNode *reverslist(ListNode *head)
+    {
+        if(!head || !head->next)
+            return nullptr;
+        
+        ListNode *newhead = reverslist(head -> next);;
+        head -> next -> next = head;
+        head -> next = nullptr;
         return newhead;
     }
 };
