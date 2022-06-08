@@ -1,7 +1,7 @@
 /*
  * @Author: Aspirin
  * @Date: 2022-06-08 15:14:07
- * @LastEditTime: 2022-06-08 15:14:39
+ * @LastEditTime: 2022-06-08 19:24:54
  * @FilePath: /Leetcode/Leetcodes/35.搜索插入位置.cpp
  * @Description: self Leetcodes
  * 
@@ -71,7 +71,18 @@ using namespace std;
 class Solution {
 public:
     int searchInsert(vector<int>& nums, int target) {
-        
+        int l = 0,r = nums.size()-1;
+        while(l <= r)
+        {
+            int middle = l + (r-l)/2;
+            if(nums[middle] == target)
+                return middle;
+            if(nums[middle] < target)
+                l = middle+1;
+            else
+                r = middle-1;
+        }
+        return l;
     }
 };
 // @lc code=end
