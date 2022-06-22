@@ -1,8 +1,8 @@
 /*
  * @Author: Aspirin
  * @Date: 2022-06-11 20:29:24
- * @LastEditTime: 2022-06-12 09:44:35
- * @FilePath: /Leetcode/Leetcodes/6.z-字形变换.cpp
+ * @LastEditTime: 2022-06-20 08:24:05
+ * @FilePath: /Leetcode/Leetcodes/LC6z字形变换.cpp
  * @Description: self Leetcodes
  * 
  * Copyright (c) 2022 by $ Aspirin, All Rights Reserved. 
