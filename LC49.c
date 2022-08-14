@@ -1,7 +1,7 @@
 /*
  * @Author: Aspirin
  * @Date: 2022-08-06 17:42:21
- * @LastEditTime: 2022-08-14 09:53:10
+ * @LastEditTime: 2022-08-14 11:33:22
  * @FilePath: /Leetcode/Leetcodes/LC49.c
  * @Description: self Leetcodes
  * 
@@ -12,9 +12,6 @@
  * The sizes of the arrays are returned as *returnColumnSizes array.
  * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().
  */
-#include <malloc/malloc.h>
-#include <stdio.h>
-#include "inc/uthash.h"
 
 struct mystruct
 {
@@ -36,17 +33,19 @@ struct mystruct *addload(int ikey, int indexi) {
     temp = findload(ikey);
     if (temp == NULL) {
         temp = (struct mystruct*)malloc(sizeof(struct mystruct));
+        temp->now = 1;
         temp->ikey = ikey;
         temp->indexi[0] = indexi;
-        temp->now = 1;
         HASH_ADD_INT(ge, ikey, temp);
     } else {
         temp->indexi[temp->now] = indexi;
         temp->now++;
     }
+    return temp;
 }
 
 char *** groupAnagrams(char ** strs, int strsSize, int* returnSize, int** returnColumnSizes){
+    ge = NULL;
     for (int i = 0; i < strsSize; ++i) {
         int allnums = 0;
         for (int j = 0; j< strlen(strs[i]); ++j) {
@@ -61,13 +60,14 @@ char *** groupAnagrams(char ** strs, int strsSize, int* returnSize, int** return
     *returnSize = Num;
     (*returnColumnSizes) = (int *)malloc(sizeof(int) * (*returnSize));
     int i = 0;
-    for (s = ge; s != NULL; s = (struct mystruct *)s->hh.next) {
+    for (s = ge; s != NULL; s = s->hh.next) {
         int all = s->now;
-        ans[i++] = (char **)malloc(sizeof(char **) * all);
+        ans[i] = malloc(sizeof(char *) * all);
         for (int j = 0; j < all; ++j) {
             ans[i][j] = strs[s->indexi[j]];
         }
         (*returnColumnSizes)[i] = all;
+        i++;
     }
     return ans;
 }
