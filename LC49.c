@@ -1,7 +1,7 @@
 /*
  * @Author: Aspirin
  * @Date: 2022-08-06 17:42:21
- * @LastEditTime: 2022-08-14 11:33:22
+ * @LastEditTime: 2022-08-14 11:37:42
  * @FilePath: /Leetcode/Leetcodes/LC49.c
  * @Description: self Leetcodes
  * 
@@ -12,6 +12,8 @@
  * The sizes of the arrays are returned as *returnColumnSizes array.
  * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().
  */
+#include <stdio.h>
+#include "inc/uthash.h"
 
 struct mystruct
 {
