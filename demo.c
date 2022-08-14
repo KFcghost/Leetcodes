@@ -12,12 +12,7 @@ struct mystruct* ge = NULL;
 
 int main()
 {
-    char **str =  (char **)malloc(sizeof(char *) * 4);
-    str[0] = "abc";
-    str[1] = "abb";
-    str[2] = "abd";
-    str[3] = "abc";
-
+    char **str;
     for (int i = 0;i < 4; ++i) {
         struct mystruct* temp = NULL;
         HASH_FIND_STR(ge, str[i], temp);
