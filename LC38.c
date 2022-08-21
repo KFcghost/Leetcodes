@@ -1,7 +1,7 @@
 /*
  * @Author: Aspirin
  * @Date: 2022-08-06 17:10:38
- * @LastEditTime: 2022-08-06 17:26:06
+ * @LastEditTime: 2022-08-20 21:42:55
  * @FilePath: /Leetcode/Leetcodes/LC38.c
  * @Description: self Leetcodes
  * 

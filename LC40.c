@@ -1,7 +1,7 @@
 /*
  * @Author: Aspirin
  * @Date: 2022-08-14 20:02:46
- * @LastEditTime: 2022-08-14 20:15:10
+ * @LastEditTime: 2022-08-20 21:44:57
  * @FilePath: /Leetcode/Leetcodes/LC40.c
  * @Description: self Leetcodes
  * 
